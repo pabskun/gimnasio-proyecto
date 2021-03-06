@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <title>Document</title>
@@ -13,7 +14,7 @@
     <header class="header-principal">
         <nav>
             <div class="flotar-izq">
-                <a href="usuarios.html">Usuarios</a>
+                <a href="usuarios.html" class="active">Usuarios</a>
                 <a href="#">Rutinas</a>
                 <a href="#">Ejercicios</a>
                 <a href="#">Clases</a>
@@ -26,7 +27,25 @@
             </div>
         </nav>
     </header>
+
+    <main>
+        <table id="tbl-usuarios">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Sexo</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </main>
     <script src="js/navegacion.js"></script>
+    <script src="js/usuarios.js"></script>
 </body>
 
 </html>
