@@ -35,4 +35,6 @@ if (sessionStorage.getItem('usuarioConectado')) {
 }
 
 
-bntCerrarSesion.addEventListener('click', cerrarSesion);
+bntCerrarSesion.addEventListener('click', () => {
+    cerrarSesion();
+});
