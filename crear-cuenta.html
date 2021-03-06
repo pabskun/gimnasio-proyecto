@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/crear-cuenta.css">
+    <title>Crear cuenta | Gimnasio El Trueno</title>
+</head>
+
+<body>
+    <header class="header-principal">
+        <nav>
+            <div class="flotar-izq">
+                <a href="#">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <div class="flotar-der">
+                <a href="#">Ingresar</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form class="formulario">
+                <h1>Creá tu cuenta</h1>
+                <div>
+                    <label for="txt-correo">Correo:</label>
+                    <input type="email" id="txt-correo" placeholder="micorreo@gmail.com">
+                </div>
+
+                <div>
+                    <label for="txt-nombre">Nombre completo:</label>
+                    <input type="text" id="txt-nombre">
+                </div>
+
+                <div>
+                    <label for="txt-nacimiento">Nacimiento:</label>
+                    <input type="date" id="txt-nacimiento">
+                </div>
+
+                <div>
+                    <label for="slt-sexo">Sexo</label>
+                    <select id="slt-sexo">
+                        <option value="">--Seleccione una opción--</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="button" id="btn-crear" class="btn">
+                        Crear cuenta
+                    </button>
+                </div>
+
+
+            </form>
+        </section>
+
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/crear-cuenta.js"></script>
+</body>
+
+</html>

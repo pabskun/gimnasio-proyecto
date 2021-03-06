@@ -1,0 +1,64 @@
+/* Inicio: estilos banner */
+
+.banner {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    /* Alineación con flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 {
+    background: rgba(45, 52, 54, 0.6);
+    color: #fff;
+    font-size: 36px;
+    padding: 40px;
+    text-align: center;
+    /* transform: translateY(-40px); */
+}
+
+
+/* Estilos section de separación */
+
+.separador {
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+
+/* Sección servicios */
+
+.servicios {
+    display: flex;
+    min-height: 500px;
+}
+
+.servicios .imagen {
+    background-image: url('../img/servicios.jpg');
+    background-size: cover;
+    width: 50%;
+    filter: drop-shadow(8px 8px 10px gray);
+}
+
+.servicios .info {
+    background: #333;
+    color: #fff;
+    padding: 0px 50px 0px 50px;
+    width: 50%;
+}
+
+.servicios .info h2 {
+    font-size: 32px;
+    margin: 0 0 30px 0;
+}
+
+.servicios .info ul li {
+    font-size: 20px;
+    margin: 0 0 25px 0;
+}

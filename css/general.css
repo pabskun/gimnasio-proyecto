@@ -1,0 +1,54 @@
+html {
+    font-family: arial;
+    font-size: 16px;
+}
+
+.flotar-izq {
+    float: left;
+}
+
+.flotar-der {
+    float: right;
+}
+
+.btn {
+    background: #ffa502;
+    border: #333 solid 2px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.error {
+    border: 2px solid #B53471;
+}
+
+.ocultar {
+    display: none;
+}
+
+
+/* Inicio: estilos header principal */
+
+.header-principal {
+    background: #333;
+    padding: 20px;
+}
+
+.header-principal nav {
+    display: flow-root;
+}
+
+.header-principal nav .flotar-izq a {
+    margin-right: 20px;
+}
+
+.header-principal nav div a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-principal nav a:hover {
+    color: #fa983a;
+    transition: 2s;
+}
