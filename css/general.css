@@ -52,3 +52,7 @@ html {
     color: #fa983a;
     transition: 2s;
 }
+
+.header-principal nav div .active {
+    color: #fa983a;
+}

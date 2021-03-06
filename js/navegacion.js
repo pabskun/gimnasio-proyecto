@@ -2,7 +2,7 @@
 
 let usuario;
 const opciones = document.querySelectorAll('.header-principal a');
-
+const bntCerrarSesion = document.querySelector('#btn-cerrar-sesion');
 const mostrarOpcionesMenu = () => {
     switch (usuario.tipo) {
         case 'Administrador':
@@ -21,9 +21,18 @@ const mostrarOpcionesMenu = () => {
     }
 };
 
+const cerrarSesion = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.href = 'index.html';
+};
+
 if (sessionStorage.getItem('usuarioConectado')) {
     usuario = JSON.parse(sessionStorage.getItem('usuarioConectado'));
     mostrarOpcionesMenu();
 } else {
     window.location.href = 'index.html';
 }
+
+
+bntCerrarSesion.addEventListener('click', cerrarSesion);
