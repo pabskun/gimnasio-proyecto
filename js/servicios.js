@@ -21,6 +21,14 @@ let listaUsuarios = [{
         'sexo': 'Masculino',
         'contrasenna': '123Abc!',
         'tipo': 'Cliente'
+    },
+    {
+        'correo': 'jose@gmail.com',
+        'nombre': 'José Ramírez',
+        'nacimiento': '11-03-1990',
+        'sexo': 'Masculino',
+        'contrasenna': '123Abc!',
+        'tipo': 'Cliente'
     }
 ];
 

@@ -1,0 +1,27 @@
+.tabla {
+    margin-top: 30px;
+}
+
+.tabla tr {
+    height: 35px;
+}
+
+.tabla thead tr {
+    background: #34495f;
+    color: #fff;
+}
+
+.tabla thead tr th {
+    width: 200px;
+    text-align: center;
+}
+
+.tabla tbody tr:nth-child(even) {
+    background: #2980b9;
+    color: #fff;
+}
+
+.tabla tbody tr td {
+    width: 200px;
+    text-align: center;
+}
