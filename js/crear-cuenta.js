@@ -44,7 +44,7 @@ const validar = () => {
     } else {
         Swal.fire({
             'icon': 'warning',
-            'title': 'No se puedo registrar la cuenta',
+            'title': 'No se pudo registrar la cuenta',
             'text': 'Por favor revise los campos resaltados',
             'confirmButtonText': 'Entendido'
         });

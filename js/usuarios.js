@@ -23,6 +23,26 @@ const mostrarTabla = () => {
 
         let botonEliminar = document.createElement('button');
         botonEliminar.innerText = 'Eliminar';
+
+        botonEliminar.addEventListener('click', () => {
+            Swal.fire({
+                'icon': 'warning',
+                'text': '¿Está seguro que desea borrar el usuario?',
+                'showCancelButton': true,
+                'confirmButtonText': '¡Sí!, estoy seguro',
+                'cancelButtonColor': '#d33',
+                'cancelButtonText': 'Cancelar',
+                'reverseButtons': true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        '',
+                        'El usuario ha sido eliminado',
+                        'success'
+                    )
+                }
+            })
+        });
         // Agregarle los botones a la celda
 
         celdaAcciones.appendChild(botonModificar);
