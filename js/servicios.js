@@ -2,14 +2,14 @@
 let listaUsuarios = [{
         'correo': 'admin@admin.com',
         'nombre': 'Raúl Pérez',
-        'nacimiento': '20-09-1973',
+        'nacimiento': '09-20-1973',
         'sexo': 'Masculino',
         'contrasenna': '123Abc!',
         'tipo': 'Administrador'
     }, {
         'correo': 'amanda@gmail.com',
         'nombre': 'Amanda Víquez',
-        'nacimiento': '11-03-1991',
+        'nacimiento': '03-11-1991',
         'sexo': 'Femenino',
         'contrasenna': '123Abc!',
         'tipo': 'Instructor'
@@ -17,7 +17,7 @@ let listaUsuarios = [{
     {
         'correo': 'pablo@gmail.com',
         'nombre': 'Pablo Monestel',
-        'nacimiento': '12-10-1987',
+        'nacimiento': '10-12-1987',
         'sexo': 'Masculino',
         'contrasenna': '123Abc!',
         'tipo': 'Cliente'
@@ -25,7 +25,7 @@ let listaUsuarios = [{
     {
         'correo': 'jose@gmail.com',
         'nombre': 'José Ramírez',
-        'nacimiento': '11-03-1990',
+        'nacimiento': '03-11-1990',
         'sexo': 'Masculino',
         'contrasenna': '123Abc!',
         'tipo': 'Cliente'
