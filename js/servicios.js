@@ -32,6 +32,27 @@ let listaUsuarios = [{
     }
 ];
 
+let ejercicios = [{
+        'nombre': 'Abdominales',
+        'zona': 'Abdomen'
+    },
+    {
+        'nombre': 'Sentadillas',
+        'zona': 'Glúteos'
+    },
+    {
+        'nombre': 'Press de pecho',
+        'zona': 'Pecho'
+    },
+    {
+        'nombre': 'TRX abierto',
+        'zona': 'Pecho'
+    },
+    {
+        'nombre': 'Curl de bíceps',
+        'zona': 'Brazo'
+    }
+]
 
 const iniciarSesion = (correo, contrasenna) => {
     let credencialesCorrectas = false;
