@@ -17,11 +17,16 @@
 }
 
 .tabla tbody tr:nth-child(even) {
-    background: #fa983a;
-    color: #fff;
+    /* background: #fa983a;
+    color: #fff; */
+}
+
+.tabla tbody tr {
+    border-bottom: 2px solid #34495f;
 }
 
 .tabla tbody tr td {
+    padding: 10px 0;
     width: 200px;
     text-align: center;
 }
