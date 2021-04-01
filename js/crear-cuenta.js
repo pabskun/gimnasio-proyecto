@@ -84,17 +84,9 @@ const imprimir = () => {
 
     let edad = calcularEdad(nacimiento);
 
-    // Temporal
-    console.log(correo, nombre, nacimiento, sexo, tipo);
 
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Su cuenta se registro con éxito',
-        'text': 'Por favor revise su correo electrónico',
-        'confirmButtonText': 'Entendido'
-    }).then(() => {
-        window.location.href = 'inicio-sesion.html';
-    });
+    registrarUsuario(correo, nombre, nacimiento, sexo, tipo);
+
 
 };
 
