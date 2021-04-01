@@ -32,6 +32,8 @@ let listaUsuarios = [{
     }
 ];
 
+
+
 let ejercicios = [{
         'nombre': 'Abdominales',
         'zona': 'Abdomen'

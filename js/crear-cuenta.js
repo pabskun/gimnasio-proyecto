@@ -4,6 +4,7 @@ const inputCorreo = document.querySelector('#txt-correo');
 const inputNombre = document.querySelector('#txt-nombre');
 const inputNacimiento = document.querySelector('#txt-nacimiento');
 const selectSexo = document.querySelector('#slt-sexo');
+const selectTipo = document.querySelector('#slt-tipo');
 
 
 const validar = () => {
@@ -39,6 +40,13 @@ const validar = () => {
         selectSexo.classList.remove('error');
     }
 
+    if (selectTipo.value == '') {
+        error = true;
+        selectTipo.classList.add('error');
+    } else {
+        selectTipo.classList.remove('error');
+    }
+
     if (error == false) {
         imprimir();
     } else {
@@ -72,11 +80,12 @@ const imprimir = () => {
     let nombre = inputNombre.value;
     let nacimiento = new Date(inputNacimiento.value);
     let sexo = selectSexo.value;
+    let tipo = selectTipo.value;
 
     let edad = calcularEdad(nacimiento);
 
     // Temporal
-    console.log(correo, nombre, nacimiento, sexo, edad);
+    console.log(correo, nombre, nacimiento, sexo, tipo);
 
     Swal.fire({
         'icon': 'success',
