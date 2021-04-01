@@ -2,8 +2,14 @@
 
 const tabla = document.querySelector('#tbl-usuarios tbody');
 const inputFiltro = document.querySelector('#txt-filtro');
+let listaUsuarios = [];
 
-const mostrarTabla = () => {
+const llenarListaUsuarios = async() => {
+    listaUsuarios = await obtenerUsuarios();
+    mostrarTabla();
+};
+
+const mostrarTabla = async() => {
     let filtro = inputFiltro.value.toLowerCase();
     tabla.innerHTML = '';
     listaUsuarios.forEach(usuario => {
@@ -57,6 +63,6 @@ const mostrarTabla = () => {
     });
 };
 
+llenarListaUsuarios();
 
-mostrarTabla();
 inputFiltro.addEventListener('keyup', mostrarTabla);

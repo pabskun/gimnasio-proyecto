@@ -31,5 +31,22 @@ const registrarUsuario = async(pcorreo, pnombre, pnacimiento, psexo, ptipo) => {
                 'icon': 'error'
             })
         });
+};
 
+const obtenerUsuarios = async() => {
+    let listaUsuarios;
+
+    await axios({
+            method: 'get',
+            url: 'http://localhost:3000/api/listar-usuarios',
+            responseType: 'json'
+        })
+        .then((response) => {
+            listaUsuarios = response.data.usuarios;
+        })
+        .catch((error) => {
+            console.log(error)
+        });
+
+    return listaUsuarios;
 };
