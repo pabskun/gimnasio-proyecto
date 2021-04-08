@@ -45,11 +45,7 @@ const mostrarTabla = async() => {
                     'reverseButtons': true
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        Swal.fire(
-                            '',
-                            'El usuario ha sido eliminado',
-                            'success'
-                        )
+                        eliminarUsuario(usuario.correo);
                     }
                 })
             });

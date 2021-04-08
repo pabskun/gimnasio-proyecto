@@ -56,6 +56,22 @@
                     </select>
                 </div>
                 <div>
+                    <label for="slt-tipo">Tipo de usuario</label>
+                    <select id="slt-tipo" required>
+                        <option value="">--Seleccione una opción--</option>
+                        <option value="Cliente">Cliente</option>
+                        <option value="Instructor">Instructor</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="slt-estado">Estado</label>
+                    <select id="slt-estado" required>
+                        <option value="">--Seleccione una opción--</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                </div>
+                <div>
                     <button type="button" id="btn-guardar" class="btn">
                         Guardar cambios
                     </button>
@@ -66,8 +82,9 @@
         </section>
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/servicios.js"></script>
+    <script src="js/usuario-servicio.js"></script>
     <script src="js/navegacion.js"></script>
     <script src="js/modificar-usuarios.js"></script>
 </body>

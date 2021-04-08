@@ -4,6 +4,8 @@ const inputCorreo = document.querySelector('#txt-correo');
 const inputNombre = document.querySelector('#txt-nombre');
 const inputNacimiento = document.querySelector('#txt-nacimiento');
 const selectSexo = document.querySelector('#slt-sexo');
+const selectTipo = document.querySelector('#slt-tipo');
+const selectEstado = document.querySelector('#slt-estado');
 const btnGuardar = document.querySelector('#btn-guardar');
 
 inputCorreo.disabled = true;
@@ -30,6 +32,8 @@ const llenarFormulario = () => {
     inputNombre.value = usuarioSeleccionado.nombre;
     inputNacimiento.value = `${anno}-${mes}-${dia}`;
     selectSexo.value = usuarioSeleccionado.sexo;
+    selectTipo.value = usuarioSeleccionado.tipo;
+    selectEstado.value = usuarioSeleccionado.estado;
 };
 
 const validar = () => {
@@ -49,14 +53,9 @@ const validar = () => {
     //validaciones de formato
 
     if (error == false) {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Usuario modificado',
-            'text': 'La información fue actualizada correctamente',
-            'confirmButtonText': 'Entendido'
-        }).then(() => {
-            window.location.href = 'usuarios.html';
-        });
+
+
+        obtenerDatos();
     } else {
         Swal.fire({
             'icon': 'warning',
@@ -66,6 +65,17 @@ const validar = () => {
         });
 
     }
+};
+// Función para obtener los datos del formulario
+const obtenerDatos = () => {
+    let correo = inputCorreo.value;
+    let nombre = inputNombre.value;
+    let nacimiento = new Date(inputNacimiento.value);
+    let sexo = selectSexo.value;
+    let tipo = selectTipo.value;
+    let estado = selectEstado.value;
+
+    modificarUsuario(correo, nombre, nacimiento, sexo, tipo, estado);
 };
 
 
