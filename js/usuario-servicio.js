@@ -107,3 +107,43 @@ const eliminarUsuario = async(pcorreo) => {
             console.log(error)
         });
 };
+
+const iniciarSesion = async(pcorreo, pcontrasenna) => {
+    await axios({
+            method: 'post',
+            url: 'http://localhost:3000/api/validar-credenciales',
+            responseType: 'json',
+            data: {
+                correo: pcorreo,
+                contrasenna: pcontrasenna
+            }
+        })
+        .then((response) => {
+            if (response.data.estado == 'No encontrado') {
+                Swal.fire({
+                    'icon': 'warning',
+                    'title': 'No ha podido iniciar sesión',
+                    'text': 'Usuario o contraseña incorrectos',
+                    'confirmButtonText': 'Entendido'
+                });
+            } else {
+
+                Swal.fire({
+                    'icon': 'success',
+                    'title': 'Bienvenido',
+                    'text': 'Ha iniciado sesión correctamente',
+                    'confirmButtonText': 'Entendido'
+                }).then(() => {
+                    if (response.data.usuario.estado == 'Cambio contraseña') {
+                        window.location.href = 'modificar-contrasenna.html';
+                    } else {
+                        sessionStorage.setItem('usuarioConectado', JSON.stringify(response.data.usuario));
+                        window.location.href = 'dashboard.html';
+                    }
+                });
+            }
+        })
+        .catch((error) => {
+            console.log(error)
+        });
+};
