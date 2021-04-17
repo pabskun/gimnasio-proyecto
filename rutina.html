@@ -12,14 +12,17 @@
     <h1>Creación de rutinas</h1>
 
     <form>
-
-        <h2>Asociar ejercicios</h2>
-        <div id="div_ejercicios">
-
-        </div>
         <div>
-            <button type="button" id="btn-crear">Crear</button>
+            <label for="txt-creacion">Fecha de creación</label>
+            <input type="date" id="txt-creacion">
         </div>
+
+        <div>
+            <label for="txt-vencimiento">Fecha de vencimiento</label>
+            <input type="date" id="txt-vencimiento">
+        </div>
+        <button id="btn-crear" type="button">Crear rutina</button>
+
 
 
 
@@ -28,7 +31,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10 "></script>
     <!-- Scripts propios -->
-    <script src="js/servicio-ejercicios.js"></script>
+
     <script src="js/servicio-rutinas.js"></script>
     <script src="js/registrar-rutina.js"></script>
 </body>

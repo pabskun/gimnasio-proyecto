@@ -1,12 +1,12 @@
 'use strict';
-const registrar_rutina = async(nombre, ejercicios) => {
+const registrarRutina = async(pcreacion, pvencimiento) => {
     await axios({
         method: 'post',
         url: 'http://localhost:3000/api/registrar-rutina',
         responseType: 'json',
         data: {
-            cliente: nombre,
-            ejercicios: JSON.stringify(ejercicios)
+            creacion: pcreacion,
+            vencimiento: pvencimiento
 
         }
     }).then((response) => {
