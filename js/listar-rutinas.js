@@ -14,6 +14,15 @@ const mostrarTabla = () => {
         fila.insertCell().innerHTML = `Creación: ${rutina.creacion}`;
         fila.insertCell().innerHTML = rutina.vencimiento;
 
+        let listaEjercicios = document.createElement('ul');
+        rutina.ejercicios.forEach(ejercicio => {
+            let li = document.createElement('li');
+            li.innerText = ejercicio.nombre;
+            listaEjercicios.appendChild(li);
+        });
+
+        fila.insertCell().appendChild(listaEjercicios);
+
         let boton = document.createElement('button');
         boton.type = 'button';
         boton.innerText = 'Agregar ejercicios';

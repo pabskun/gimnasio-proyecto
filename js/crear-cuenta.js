@@ -5,7 +5,7 @@ const inputNombre = document.querySelector('#txt-nombre');
 const inputNacimiento = document.querySelector('#txt-nacimiento');
 const selectSexo = document.querySelector('#slt-sexo');
 const selectTipo = document.querySelector('#slt-tipo');
-
+const inputsRequeridos = document.querySelectorAll(':required');
 
 const validar = () => {
     let error = false;
@@ -48,15 +48,17 @@ const validar = () => {
     }
 
     if (error == false) {
+
         imprimir();
+
     } else {
+
         Swal.fire({
             'icon': 'warning',
             'title': 'No se pudo registrar la cuenta',
             'text': 'Por favor revise los campos resaltados',
             'confirmButtonText': 'Entendido'
         });
-
     }
 
 };
@@ -90,4 +92,16 @@ const imprimir = () => {
 
 };
 
-btnCrearCuenta.addEventListener('click', validar);
+btnCrearCuenta.addEventListener('click', () => {
+    validar('registrar');
+});
+
+inputsRequeridos.forEach(input => {
+    input.addEventListener('blur', () => {
+        if (input.value == '') {
+            input.classList.add('error');
+        } else {
+            input.classList.remove('error');
+        }
+    });
+});

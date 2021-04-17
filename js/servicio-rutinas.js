@@ -27,6 +27,34 @@ const registrarRutina = async(pcreacion, pvencimiento) => {
 
 };
 
+const agregarEjercicioRutina = async(pIdRutina, pListaEjercicios) => {
+    await axios({
+        method: 'put',
+        url: 'http://localhost:3000/api/agregar-ejercicios',
+        responseType: 'json',
+        data: {
+            _idrutina: pIdRutina,
+            listaEjercicios: JSON.stringify(pListaEjercicios)
+
+        }
+    }).then((response) => {
+        Swal.fire({
+            'title': 'Los ejercicios se agregaron correctamente',
+            'icon': 'success',
+            'text': response.msj
+        }).then(() => {
+            window.location.href = 'listar-rutinas.html'
+        });
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        })
+    });
+
+};
+
 const listarRutinas = async() => {
     let lista_rutinas = [];
     await axios({

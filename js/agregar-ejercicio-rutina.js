@@ -1,5 +1,6 @@
 'use strict';
 const tabla = document.querySelector('#tbl-ejercicios tbody');
+const btnAgregar = document.querySelector('#btn-agregar');
 
 let listaEjercicios = [];
 
@@ -23,4 +24,18 @@ const mostrarTabla = () => {
     });
 };
 
+const obtenerDatos = () => {
+    let _idRutina = localStorage.getItem('rutinaSeleccionada');
+    let listaInputs = document.querySelectorAll('input[type=checkbox]:checked');
+    let listaIdEjercicios = [];
+
+    listaInputs.forEach(input => {
+        listaIdEjercicios.push(input.value);
+    });
+    agregarEjercicioRutina(_idRutina, listaIdEjercicios)
+
+};
+
+
 llenarListaEjercicios();
+btnAgregar.addEventListener('click', obtenerDatos);
