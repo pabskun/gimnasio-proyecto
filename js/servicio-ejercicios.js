@@ -28,7 +28,7 @@ const registrar_ejercicio = async(nombre, zona, imagen) => {
 
 };
 
-const listar_ejercicios = async() => {
+const listarEjercicios = async() => {
     let lista_ejercicios = [];
     await axios({
         method: 'get',

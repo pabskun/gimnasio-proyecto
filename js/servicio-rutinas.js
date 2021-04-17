@@ -15,7 +15,7 @@ const registrarRutina = async(pcreacion, pvencimiento) => {
             'icon': 'success',
             'text': response.msj
         }).then(() => {
-            // limpiar();
+            window.location.href = 'listar-rutinas.html'
         });
     }).catch((response) => {
         Swal.fire({
@@ -27,14 +27,14 @@ const registrarRutina = async(pcreacion, pvencimiento) => {
 
 };
 
-const listar_rutinas = async() => {
+const listarRutinas = async() => {
     let lista_rutinas = [];
     await axios({
         method: 'get',
         url: 'http://localhost:3000/api/listar-rutinas',
         responseType: 'json'
     }).then((response) => {
-        lista_rutinas = response.data.lista_rutinas;
+        lista_rutinas = response.data.rutinas;
     }).catch((response) => {
 
     });
